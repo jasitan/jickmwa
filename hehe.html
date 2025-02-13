@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        .container {
+            background-color: #FF6F61;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            background-color: #fff;
+            color: #FF6F61;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        .heart {
+            font-size: 5rem;
+            color: red;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .show-heart {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hello, honey!</h1>
+        <p>Click below to find out...</p>
+        <button id="askButton">Will You Be My Valentine?</button>
+        <div id="heart" class="heart">❤️</div>
+    </div>
+
+    <script>
+        document.getElementById('askButton').addEventListener('click', function() {
+            const heart = document.getElementById('heart');
+            heart.classList.add('show-heart');
+            this.textContent = 'Thank You! 💖';
+            setTimeout(() => {
+                alert('You are my Valentine forever! 😘');
+            }, 1000);
+        });
+    </script>
+
+</body>
+</html>
